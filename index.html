@@ -1,114 +1,127 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-  
   <title>AMLAPP</title>
   <meta name="description" content="">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+  <script>
+  var SITE_TITLE = 'Amlapp';
+  var SITE_KEYWORD = 'Amlapp';
+  var SITE_DESCRIPTION = 'Amlapp';
+  document.title = SITE_TITLE;
+  /* Ambiente produzione */
+  var BASEURL = "https://amlapp.euriskoformazione.com/prod/ui-amlapp/";
+  var SERVERURL = "https://amlapp.euriskoformazione.com/prod/amlapp-server/";
+  var SERVICEURL = "https://amlapp.euriskoformazione.com/prod/amlapp-server/service/service.php";
+  var SERVICEURL2 = "https://amlapp.euriskoformazione.com/prod/amlapp-server/service/service.php";
+  var SERVICEDIRURL = "https://amlapp.euriskoformazione.com/prod/amlapp-server/service/";
+  var UPLOADSURL = "https://amlapp.euriskoformazione.com/prod/amlapp-server/uploads/";
+  var PDFURL = "https://amlapp.euriskoformazione.com/prod/amlapp-server/pdfgeneration/";
+  var LOG = "https://amlapp.euriskoformazione.com/prod/amlapp-server/service/log.php";
+  var TIPO_CONF='prod'
+  </script>
+  <link rel="icon" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/img/favicon.ico" type="image/x-icon"/>
   <!-- Stylesheets -->
   <!--
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   -->
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/roboto.css" type="text/css">
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/materialIcon.css" type="text/css">
-  <link rel="stylesheet" type="text/css" href="https://amlapp.euriskoformazione.com/font-awesome-4.6.2/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="https://amlapp.euriskoformazione.com/css/animsition.min.css">
+  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/roboto.css" type="text/css">
+  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/materialIcon.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/font-awesome-4.6.2/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/animsition.min.css">
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.5.2/css/animsition.css"> -->
 
-  <link rel="stylesheet" type="text/css" href="https://amlapp.euriskoformazione.com/css/sweetalert.css">
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/material.min.css">
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/swipebox.min.css">
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/style.css">
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/stylesheet.css">
-  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/sweetalert.css">
+  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/material.min.css">
+  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/swipebox.min.css">
+  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/stylesheet.css">
+  <link rel="stylesheet" href="https://amlapp.euriskoformazione.com/prod/ui-amlapp/css/jquery.fancybox.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-
-  <script src="https://amlapp.euriskoformazione.com/js/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="https://amlapp.euriskoformazione.com/js/custom.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/custom.js"></script>
   <script>
   var isapp = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
   if ( isapp ) {
-    document.write('<script src="cordova.js"></' + 'script>');
+    document.write('<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/cordova.js"></' + 'script>');
     $(document).ready(function(){app.initialize();});
   }
   </script>
-  <script src="https://amlapp.euriskoformazione.com/js/animsition.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/sweetalert.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/material.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/jquery.swipebox.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/jquery.fancybox.pack.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/function.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/angular.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/angular-ui-router.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/angular-route.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/angular-sanitize.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/angular-translate.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/angular-translate-loader-static-files.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/tmhDynamicLocale.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/animsition.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/sweetalert.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/material.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/jquery.swipebox.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/jquery.fancybox.pack.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/function.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/angular.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/angular-ui-router.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/angular-route.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/angular-sanitize.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/angular-translate.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/angular-translate-loader-static-files.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/tmhDynamicLocale.min.js"></script>
 
-  <script src="https://amlapp.euriskoformazione.com/js/ng-infinite-scroll.min.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/js/ng-currency.js"></script></head>
-  <script src="https://amlapp.euriskoformazione.com/js/signature_pad.js"></script></head>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/ng-infinite-scroll.min.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/ng-currency.js"></script></head>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/js/signature_pad.js"></script></head>
 
-  <script src="https://amlapp.euriskoformazione.com/amlapp.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/language.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/login.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/amlapp.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/language.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/login.js"></script>
 
-  <script src="https://amlapp.euriskoformazione.com/app/my_contract.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/view_contract.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/my_company.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/my_customer.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/my_agent.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/owners_list.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/my_document.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/add_contract.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/add_customer.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/add_company.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/add_document.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/add_owners.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/kyc_contractor.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/kyc_company.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/kyc_owners.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/kyc_document.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/kyc_signature.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile01.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile02.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile03.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile04.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile05.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_final.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/my_profile.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile01_sm.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile02_sm.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_final_sm.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile01_4d.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile02_4d.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile03_4d.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_profile04_4d.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/risk_final_4d.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/agg_kyc.js"></script>
-  <script src="https://amlapp.euriskoformazione.com/app/agg_risk.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_contract.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/view_contract.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_company.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_customer.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_agent.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/owners_list.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_document.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_contract.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_customer.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_company.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_document.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_owners.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/kyc_contractor.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/kyc_company.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/kyc_owners.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/kyc_document.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/kyc_signature.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile01.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile02.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile03.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile04.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile05.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_final.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_profile.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile01_sm.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile02_sm.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_final_sm.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile01_4d.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile02_4d.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile03_4d.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_profile04_4d.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/risk_final_4d.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/agg_kyc.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/agg_risk.js"></script>
 
-  <script src="https://amlapp.euriskoformazione.com/app/share.js"></script>
+  <script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/share.js"></script>
 
 <!-- Amministrazione  -->
-<script src="https://amlapp.euriskoformazione.com/app/email_templates.js"></script>
-<script src="https://amlapp.euriskoformazione.com/app/add_email_template.js"></script>
-<script src="https://amlapp.euriskoformazione.com/app/my_agencies.js"></script>
-<script src="https://amlapp.euriskoformazione.com/app/add_agency.js"></script>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/email_templates.js"></script>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_email_template.js"></script>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/my_agencies.js"></script>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/app/add_agency.js"></script>
 <!--
 Text angular
 -->
-<link rel='stylesheet' href='https://amlapp.euriskoformazione.com/textAngular/dist/textAngular.css'>
-<script src="https://amlapp.euriskoformazione.com/textAngular/dist/textAngular-rangy.min.js"></script>
-<script src="https://amlapp.euriskoformazione.com/textAngular/dist/textAngular-sanitize.min.js"></script>
-<script src="https://amlapp.euriskoformazione.com/textAngular/dist/textAngular.min.js"></script>
+<link rel='stylesheet' href='https://amlapp.euriskoformazione.com/prod/ui-amlapp/textAngular/dist/textAngular.css'>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/textAngular/dist/textAngular-rangy.min.js"></script>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/textAngular/dist/textAngular-sanitize.min.js"></script>
+<script src="https://amlapp.euriskoformazione.com/prod/ui-amlapp/textAngular/dist/textAngular.min.js"></script>
 <!-- -->
 
   <body>
@@ -151,14 +164,14 @@ Text angular
 
               <div id="heading" class="account-navigation"> <!-- top icons -->
                 <!--  <a class="mdl-button mdl-js-button mdl-button--icon left" onClick="logout()" href="javascript:void(0)">
-                <img src="img/back-button.png">
+                <img src="ui-amlapp/img/back-button.png">
               </a>  -->
               <div ng-show="main.Sidebar" class="left" style="margin-left:25px">&nbsp;</div>
               <a ng-show="main.Back==true"  class="mdl-button mdl-js-button mdl-button--icon left" href="javascript:;" ng-click="back()">
-                <img src="img/back-button.png">
+                <img src="ui-amlapp/img/back-button.png">
               </a>
               <button id="add_button" ng-show="main.Add==true" ng-click="add()" class="mdl-button mdl-js-button mdl-button--icon right" style="border:2px solid #FFF">
-                <!--<img src="img/add-search.png">-->
+                <!--<img src="ui-amlapp/img/add-search.png">-->
                 <b >+</b>
               </button>
               <span style="margin-left:-130px;font-size:8px" class="mdl-tooltip mdl-tooltip--validation toright" for="add_button" >
@@ -182,7 +195,7 @@ Text angular
           </div>
         </div>
         <div id="ui-loader" class="center2" ng-show="main.loader==true" id="loader_img" >&nbsp;
-          <img   style="height:50px;width:50px;margin-top:20px" src="img/loader2.gif"  />
+          <img   style="height:50px;width:50px;margin-top:20px" src="ui-amlapp/img/loader2.gif"  />
         </div>
         <div  id="ui-content" ng-class="(main.login) ? 'meno30Top' :''" ui-view ng-hide="main.loader==true" class="  account-data add-customer-data content-data-ax" ng-cloak> <!-- text fields -->
         </div>
